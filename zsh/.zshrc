@@ -1,6 +1,9 @@
 export ZSH="$HOME/.oh-my-zsh"
-
 ZSH_THEME=""
+
+# Colours
+source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+
 
 plugins=(
 	git
@@ -15,3 +18,7 @@ eval "$(starship init zsh)"
 
 # Programs
 eval "$(zoxide init zsh)"
+
+# Settings
+# Disable beep on error
+unsetopt beep
