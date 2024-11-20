@@ -22,3 +22,7 @@ eval "$(zoxide init zsh)"
 # Settings
 # Disable beep on error
 unsetopt beep
+
+# environment
+source ~/.env
+. $HOME/.cargo/env # rust
