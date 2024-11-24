@@ -18,6 +18,7 @@ eval "$(starship init zsh)"
 
 # Programs
 eval "$(zoxide init zsh)"
+alias ls="eza --icons"
 
 # Settings
 # Disable beep on error
