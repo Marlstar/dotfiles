@@ -27,3 +27,6 @@ unsetopt beep
 # environment
 source ~/.env
 . $HOME/.cargo/env # rust
+
+# Custom aliases
+source ~/utils.zsh
