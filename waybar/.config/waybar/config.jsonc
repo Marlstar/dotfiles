@@ -10,6 +10,7 @@
 		"hyprland/workspaces"
 	],
 	"modules-right": [
+		"tray",
 		"pulseaudio",
 		"network",
 		"cpu",
@@ -34,7 +35,7 @@
 		},
 		"sort-by-number": true,
 		"persistent-workspaces": {
-			"*": 3, // 3 workspaces by default on every monitor
+			"*": 3 // 3 workspaces by default on every monitor
 		}
 	},
 	"clock": {
@@ -74,6 +75,10 @@
 		"format-linked": "{ifname} (No IP) ",
 		"format-disconnected": " ⚠ ",
 		"format-alt": "{ipaddr}/{cidr}"
+	},
+	"tray": {
+		"reverse-direction": true,
+		"spacing": 10
 	},
 	"pulseaudio": {
 		"format": "{icon}  {volume}%",
