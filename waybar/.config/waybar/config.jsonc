@@ -11,6 +11,7 @@
 	],
 	"modules-right": [
 		"tray",
+		"custom/split",
 		"pulseaudio",
 		"network",
 		"cpu",
@@ -119,5 +120,9 @@
 		"on-click": "swaync-client -t -sw",
 		"on-click-right": "swaync-client -d -sw",
 		"escape": true
+	},
+	"custom/split": {
+		"tooltip": false,
+		"format": "     "
 	}
 }

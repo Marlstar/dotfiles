@@ -51,6 +51,7 @@
 		"inhibitors",
 		"title",
 		"dnd",
+		"buttons-grid",
 		"notifications"
 	],
 	"widget-config": {

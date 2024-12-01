@@ -138,3 +138,8 @@ label:focus {
 #pulseaudio.muted {
 	color: @text;
 }
+
+#custom-split {
+	background: none;
+	border: none;
+}
