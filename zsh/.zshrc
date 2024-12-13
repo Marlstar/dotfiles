@@ -7,11 +7,21 @@ source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 plugins=(
 	git
-	zsh-syntax-highlighting
 	zsh-autosuggestions
+	zsh-syntax-highlighting
+	fast-syntax-highlighting
+	zsh-autocomplete
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# autocomplete settings
+# minimum amount of characters before autocompletion shows
+zstyle ':autocomplete:*' min-input 1
+# how long without input before autocompletion shows
+zstyle ':autocomplete:*' delay 0.5
+# how many lines the history search shows
+zstyle ':autocomplete:history-search-backward:*' list-lines 10
 
 # Prompter
 eval "$(starship init zsh)"
@@ -38,3 +48,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+export TYPST_INSTALL="/home/themarlstar/.typst"
+export PATH="$TYPST_INSTALL/bin:$PATH"
