@@ -19,7 +19,7 @@ source $ZSH/oh-my-zsh.sh
 # minimum amount of characters before autocompletion shows
 zstyle ':autocomplete:*' min-input 1
 # how long without input before autocompletion shows
-zstyle ':autocomplete:*' delay 0.5
+zstyle ':autocomplete:*' delay 0.1
 # how many lines the history search shows
 zstyle ':autocomplete:history-search-backward:*' list-lines 10
 
