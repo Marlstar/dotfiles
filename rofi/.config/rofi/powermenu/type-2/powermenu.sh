@@ -12,7 +12,7 @@
 
 # Current Theme
 dir="$HOME/.config/rofi/powermenu/type-2"
-theme='style-1'
+theme='style-9'
 
 # CMDs
 uptime="`uptime -p | sed -e 's/up //g'`"
@@ -71,7 +71,9 @@ run_cmd() {
 			amixer set Master mute
 			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then
-			if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
+			if [[ "$DESKTOP_SESSION" == 'hyprland' ]]; then
+				hyprctl dispatch exit
+			elif [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
 				openbox --exit
 			elif [[ "$DESKTOP_SESSION" == 'bspwm' ]]; then
 				bspc quit
@@ -96,8 +98,8 @@ case ${chosen} in
 		run_cmd --reboot
         ;;
     $lock)
-		if [[ -x '/usr/bin/betterlockscreen' ]]; then
-			betterlockscreen -l
+		if [[ -x '/usr/bin/hyprlock' ]]; then
+			hyprctl dispatch exec hyprlock
 		elif [[ -x '/usr/bin/i3lock' ]]; then
 			i3lock
 		fi
