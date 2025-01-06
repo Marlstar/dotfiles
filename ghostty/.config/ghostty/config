@@ -1,0 +1,19 @@
+# Source keybinds
+config-file = keybinds.conf
+
+# <======================>
+# <====| Appearance |====>
+# <======================>
+theme = tokyonight_moon
+
+# Font
+font-family = JetbrainsMono Nerd Font
+font-size = 14
+
+# Window
+gtk-titlebar = false
+
+# <====================>
+# <====| Function |====>
+# <====================>
+mouse-hide-while-typing = true
