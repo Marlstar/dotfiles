@@ -48,10 +48,8 @@
 		}
 	},
 	"widgets": [
-		"inhibitors",
-		"title",
-		"dnd",
-		"notifications"
+		"notifications",
+		"volume"
 	],
 	"widget-config": {
 		"inhibitors": {
@@ -78,12 +76,13 @@
 		"buttons-grid": {
 			"actions": [
 				{
-					"label": "直",
-					"type": "toggle",
-					"active": true,
-					"command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
-					"update_command": "sh -c '[[ $(nmcli radio wifi) == \"enabled\" ]] && echo true || echo false'"
-				}
+                    "label": "   Connected",
+                    "command": "swaync-widgets wifi"
+                },
+				{
+                    "label": "󰂲  Bluetooth",
+                    "command": "swaync-widgets bluetooth"
+                }
 			]
 		}
 	}

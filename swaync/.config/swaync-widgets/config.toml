@@ -1,0 +1,46 @@
+# Swaync stuff
+SwayncConfigFile="/home/themarlstar/.config/swaync/config.json"
+swaync_css_widgets="/home/themarlstar/.config/swaync/widgets.css"
+swaync_reload_command="swaync-client --reload-css & swaync-client --reload-config"
+
+# CSS | Base stuff
+css_prepend="@define-color main #cba6f7; @define-color crust #11111b; @define-color surface0 #313244; @define-color text #cdd6f4;"
+# css selector for the button
+css_button_selector=".widget-buttons-grid>flowbox>flowboxchild:nth-child(?)>button"
+# css selector fot the button when hover
+css_button_hover_selector=".widget-buttons-grid>flowbox>flowboxchild:nth-child(?)>button:hover"
+# css selector fot the label
+css_label_selector=".widget-buttons-grid>flowbox>flowboxchild:nth-child(?)>button>label"
+# css selector fot the label when hover
+css_label_hover_selector=".widget-buttons-grid>flowbox>flowboxchild:nth-child(?)>button:hover>label"
+
+# CSS | Button styles
+[styles_off]
+css_button="background: @transparent; border: 2px solid @surface0;"
+css_button_hover="background: @transparent; border: 2px solid @main;"
+css_label="color: @text;"
+css_label_hover="color: @main;"
+
+# <===============================>
+# <==========| WIDGETS |==========>
+# <===============================>
+
+# Wifi
+[[widget]]
+desc="wifi"
+index="1"
+off_label="󱚼   Wi-FI"
+on_label="   Connected"
+turn_on_command="nmcli radio wifi on"
+turn_off_command="nmcli radio wifi off"
+check_status_command="nmcli radio wifi | grep enabled"
+
+# Bluetooth
+[[widget]]
+desc="bluetooth"
+index="3"
+off_label="󰂲  Bluetooth"
+on_label="󰂯  Bluetooth"
+turn_on_command="rfkill unblock bluetooth"
+turn_off_command="rfkill block bluetooth"
+check_status_command="rfkill list bluetooth | grep \"Soft blocked: no\""
