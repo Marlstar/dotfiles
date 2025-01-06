@@ -30,6 +30,7 @@ eval "$(starship init zsh)"
 # Programs
 eval "$(zoxide init zsh)"
 alias ls="eza --icons"
+eval "$(rbw gen-completions zsh)"
 
 # Settings
 # Disable beep on error
