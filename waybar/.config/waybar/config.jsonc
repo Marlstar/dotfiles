@@ -13,8 +13,8 @@
 		"tray",
 		"pulseaudio",
 		"network",
-		"cpu",
-		"temperature",
+		// "cpu",
+		// "temperature",
 		"battery",
 		"clock",
 		"custom/notifications"
@@ -31,7 +31,8 @@
 		"format": "{icon}",
 		"on-click": "activate",
 		"format-icons": {
-			"active": " " // using a thin space (U+2009)
+			"active": " ", // using a thin space (U+2009)
+			"10": " " // Workspace for messaging apps (signal and telegram)
 		},
 		"sort-by-number": true,
 		"persistent-workspaces": {
