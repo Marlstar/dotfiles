@@ -11,6 +11,7 @@ plugins=(
 	zsh-syntax-highlighting
 	fast-syntax-highlighting
 	zsh-autocomplete
+	zsh-vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
