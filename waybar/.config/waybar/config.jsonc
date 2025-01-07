@@ -84,13 +84,13 @@
 	},
 	"pulseaudio": {
 		"format": "{icon}  {volume}%",
-		"format-bluetooth": "{volume}% {icon} {format_source}",
-		"format-bluetooth-muted": " {icon} {format_source}",
+		"format-bluetooth": "{volume}% {icon}",
+		"format-bluetooth-muted": " {icon}",
 		"format-muted": "",
 		"format-icons": {
-			"headphone": "",
-			"hands-free": "",
-			"headset": "",
+			"headphone": " ",
+			"hands-free": "󱡏 ",
+			"headset": "󱡏 ",
 			"phone": "",
 			"portable": "",
 			"car": "",
