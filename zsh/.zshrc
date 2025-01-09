@@ -10,8 +10,8 @@ plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 	fast-syntax-highlighting
-	zsh-autocomplete
-	zsh-vi-mode
+	# zsh-autocomplete
+	# zsh-vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -31,6 +31,8 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 alias ls="eza --icons"
 eval "$(rbw gen-completions zsh)"
+# throws an error: "_arguments:comparguments:327: can only be called from completion function"
+# eval "$(zellij setup --generate-completion zsh)"
 
 # Settings
 # Disable beep on error
@@ -50,5 +52,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
 export TYPST_INSTALL="/home/themarlstar/.typst"
 export PATH="$TYPST_INSTALL/bin:$PATH"
