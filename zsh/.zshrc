@@ -29,7 +29,7 @@ eval "$(starship init zsh)"
 
 # Programs
 eval "$(zoxide init zsh)"
-alias ls="eza --icons"
+alias ls="eza -a --icons"
 eval "$(rbw gen-completions zsh)"
 # throws an error: "_arguments:comparguments:327: can only be called from completion function"
 # eval "$(zellij setup --generate-completion zsh)"
