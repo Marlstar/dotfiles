@@ -58,3 +58,5 @@ esac
 export TYPST_INSTALL="/home/themarlstar/.typst"
 export PATH="$TYPST_INSTALL/bin:$PATH"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+export GPG_TTY=$(tty)
