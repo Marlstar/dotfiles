@@ -13,6 +13,10 @@ plugins=(
 	fast-syntax-highlighting
 	# Program plugins
 	git
+	gitfast # faster git completion & completion descriptions
+	git-commit # aliases for conventional commit messages
+	gh
+	github # more github stuff
 	starship
 	zoxide
 	rbw
@@ -20,6 +24,28 @@ plugins=(
 	rust # for cargo/rustc/rustup
 	brew
 	gpg-agent # auto-starts gpg-agent
+	fzf
+	pip
+	rclone
+
+	# System commands
+	systemd
+	yum
+
+	# Useful commands
+	aliases # sorted listing of aliases
+
+	# Useful functionality
+	fancy-ctrl-z # Focus background jobs with Ctrl+z again
+	history-substring-search # cyle history with any part of commands
+	sudo # press esc twice to prefix with sudo
+	zsh-interactive-cd # use fzf for cd completion
+
+	# Automatic stuff
+	dotenv # autload .env when cd'ing into a dir
+
+	# Other
+	colored-man-pages
 )
 source $ZSH/oh-my-zsh.sh
 
