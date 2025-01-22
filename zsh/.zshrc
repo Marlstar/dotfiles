@@ -14,6 +14,7 @@ plugins=(
 	fast-syntax-highlighting
 	# zsh-autocomplete
 	# zsh-vi-mode
+	rust
 )
 
 source $ZSH/oh-my-zsh.sh
