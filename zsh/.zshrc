@@ -8,23 +8,27 @@ source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 
 plugins=(
-	git
+	# ZSH core stuff
 	zsh-autosuggestions
 	fast-syntax-highlighting
-	rust
+	# Program plugins
+	git
+	starship
+	zoxide
+	rbw
+	eza
+	rust # for cargo/rustc/rustup
+	brew
+	gpg-agent # auto-starts gpg-agent
 )
-
 source $ZSH/oh-my-zsh.sh
 
-# Prompter
-eval "$(starship init zsh)"
-
-# Programs
-eval "$(zoxide init zsh)"
-alias ls="eza -a --icons"
-eval "$(rbw gen-completions zsh)"
-# throws an error: "_arguments:comparguments:327: can only be called from completion function"
-# eval "$(zellij setup --generate-completion zsh)"
+# Plugin configs
+# eza
+zstyle ":omz:plugins:eza" "dirs-first" yes
+zstyle ":omz:plugins:eza" "icons" yes
+zstyle ":omz:plugins:eza" "show-group" no 
+alias ls="eza --icons -a --group-directories-first"
 
 # Settings
 # Disable beep on error
@@ -47,6 +51,5 @@ esac
 
 export TYPST_INSTALL="/home/themarlstar/.typst"
 export PATH="$TYPST_INSTALL/bin:$PATH"
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 export GPG_TTY=$(tty)
