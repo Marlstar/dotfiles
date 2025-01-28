@@ -29,6 +29,7 @@ plugins=(
 	rclone
 
 	# System commands
+	dnf
 	systemd
 	yum
 
