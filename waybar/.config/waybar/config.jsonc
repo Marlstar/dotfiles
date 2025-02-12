@@ -43,7 +43,7 @@
 	},
 	"custom/layout": {
 		"format": " {}",
-		"exec": "hyprctl devices -j | jq -r '.keyboards[] | select(.main == true) | .active_keymap' | cut -d '(' -f2 | cut -d ')' -f1 | sed 's/-/ /' | sed 's/US/QWERTY/'",
+		"exec": "hyprctl devices -j | jq -r '.keyboards[] | select(.main == true) | .active_keymap' | cut -d '(' -f2 | cut -d ')' -f1 | sed 's/-/ /' | sed 's/US/QWERTY/' | sed 's/ Ortholinear//'",
 		"restart-interval": 1
 		//"on-click": "swaync-client -t -sw"
 	},
