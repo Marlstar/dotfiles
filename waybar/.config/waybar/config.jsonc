@@ -15,6 +15,7 @@
 		"network",
 		// "cpu",
 		// "temperature",
+		"custom/layout",
 		"battery",
 		"clock",
 		"custom/notifications"
@@ -39,6 +40,12 @@
 		"persistent-workspaces": {
 			"*": 3 // 3 workspaces by default on every monitor
 		}
+	},
+	"custom/layout": {
+		"format": " {}",
+		"exec": "hyprctl devices -j | jq -r '.keyboards[] | select(.main == true) | .active_keymap' | cut -d '(' -f2 | cut -d ')' -f1 | sed 's/-/ /' | sed 's/US/QWERTY/'",
+		"restart-interval": 1
+		//"on-click": "swaync-client -t -sw"
 	},
 	"clock": {
 		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",

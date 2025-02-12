@@ -88,6 +88,8 @@ button:hover {
 
 #custom-notifications { color: @flamingo; }
 
+#custom-layout { color: @mauve; }
+
 #window { color: @mauve; }
 
 .modules-right,
