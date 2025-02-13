@@ -1,0 +1,9 @@
+program_options:
+  tray: "auto"
+  automount: true
+  file_manager: "thunar"
+  terminal: "ghostty --working-directory="
+
+notifications:
+  timeout: 1.5
+  device_mounted: 4
