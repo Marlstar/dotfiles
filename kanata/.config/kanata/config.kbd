@@ -1,0 +1,80 @@
+;; Source keyboard
+(defsrc
+	grv  1 2 3 4 5 6 7 8 9 0 - = bspc
+	tab  q w e r t y u i o p [ ] \
+	caps a s d f g h j k l ; ' ret
+	lsft z x c v b n m , . / rsft
+	lctl lmet lalt spc ralt rctl
+)
+;; QWERTY with home-row mods
+(deflayer qwerty
+	grv  1 2 3 4 5 6 7 8 9 0 - = bspc
+	tab  q w e r t y u i o p [ ] \
+	esc @qma @qms @qmd @qmf g h @qmj @qmk @qml @qm; ' ret
+	lsft z x c v b n m , . / rsft
+	lctl lmet @sym spc @nav rctl
+)
+;; Colemak-dh-ortho remap
+(deflayer colemakdh
+	grv 1 2 3 4 5 6 7 8 9 0 - = bspc
+	tab q w f p b j l u y ; [ ] \
+	esc @cma @cmr @cms @cmt g m @cmn @cme @cmi @cmo ' ret
+	lsft z x c d v k h , . / rsft
+	lctl lmet @sym spc @nav rctl
+)
+
+;; Symbols layer
+(deflayer symbols
+	_ _ _ _ _ _ _ _ _ _ _ _ _ _
+	_ _ _ (unicode "[") (unicode "]") XX (unicode "/") (unicode "*") (unicode "+") (unicode "%") (unicode ":") (unicode "|") _ _
+	_ (unicode "-") (unicode "_") (unicode "(") (unicode ")") (unicode "`") (unicode "^") (unicode "<") (unicode ">") (unicode "=") (unicode "$") @dquote _
+	lmeta (tap-hold 250 250 (unicode "~") lalt) (unicode "&") (unicode "{") (unicode "}") XX XX (unicode "!") (unicode "@") (unicode "#") (tap-hold 250 250 (unicode "?") ralt) _
+	_ _ _ _ _ _
+)
+
+;; Nav/num layer
+(deflayer navnum
+	_ f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 _
+	_ XX home up end pgup XX 7 8 9 _ _ _ _
+	_ _ left down right pgdn XX 4 5 6 rmeta RM-rsft _
+	_ lalt C-S-tab S-tab C-tab XX 0 1 2 3 (tap-hold 250 250 (unicode "/") ralt) _
+	@usecolemak @useqwerty _ _ _ _
+)
+
+(defcfg
+	process-unmapped-keys   yes
+	allow-hardware-repeat   no
+)
+
+;; Toggle between QWERTY and Colemak-DH
+(defalias usecolemak (layer-switch colemakdh))
+(defalias useqwerty (layer-switch qwerty))
+
+;; Layers
+(defalias sym (layer-while-held symbols))
+(defalias nav (layer-while-held navnum))
+
+;; Home-row mods
+;; Colemak
+(defalias cmt (tap-hold 200 200 t lsft))
+(defalias cms (tap-hold 250 250 s lctl))
+(defalias cmr (tap-hold 250 250 r lalt))
+(defalias cma (tap-hold 300 300 a lmeta))
+
+(defalias cmn (tap-hold 200 200 n rsft))
+(defalias cme (tap-hold 250 250 e rctl))
+(defalias cmi (tap-hold 250 250 i ralt))
+(defalias cmo (tap-hold 300 300 o rmeta))
+;; QWERTY
+(defalias qmf (tap-hold 200 200 f lsft))
+(defalias qmd (tap-hold 250 250 d lctl))
+(defalias qms (tap-hold 250 250 s lalt))
+(defalias qma (tap-hold 300 300 a lmeta))
+
+(defalias qmj (tap-hold 200 200 j rsft))
+(defalias qmk (tap-hold 250 250 k rctl))
+(defalias qml (tap-hold 250 250 l ralt))
+(defalias qm; (tap-hold 300 300 ; rmeta))
+
+;; Put it here so it doesn't make the file's syntax highlights broken
+(defalias dquote (unicode r#"""#))

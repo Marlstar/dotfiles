@@ -1,0 +1,12 @@
+'$schema' = 'https://raw.githubusercontent.com/rszyma/kanata-tray/main/doc/config_schema.json'
+
+[defaults]
+
+[presets.'main']
+kanata_executable = "/home/themarlstar/.local/bin/kanata"
+kanata_config = "/home/themarlstar/.config/kanata/config.kbd"
+autorun = true
+[presets.'main'.layer_icons]
+qwerty = "qwerty.png"
+colemakdh = "colemak.png"
+"*" = "qwerty.png"
