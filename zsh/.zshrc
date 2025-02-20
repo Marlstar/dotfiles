@@ -50,6 +50,10 @@ plugins=(
 )
 source $ZSH/oh-my-zsh.sh
 
+# Custom dnf aliases
+alias dnfif="sudo dnf install --repo=fedora"
+alias dnfsf="sudo dnf search --repo=fedora"
+
 # Plugin configs
 # eza
 zstyle ":omz:plugins:eza" "dirs-first" yes
