@@ -3,7 +3,7 @@
 [defaults]
 
 [presets.'main']
-kanata_executable = "/home/themarlstar/.local/bin/kanata"
+kanata_executable = "/home/themarlstar/.cargo/bin/kanata"
 kanata_config = "/home/themarlstar/.config/kanata/config.kbd"
 autorun = true
 [presets.'main'.layer_icons]
