@@ -52,6 +52,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Misc custom aliases
 alias hce="hyprctl dispatch exec"
+alias :q="exit"
 
 # Custom dnf aliases
 alias dnfif="sudo dnf install --repo=fedora"
