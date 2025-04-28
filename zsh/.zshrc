@@ -53,6 +53,7 @@ source $ZSH/oh-my-zsh.sh
 # Misc custom aliases
 alias hce="hyprctl dispatch exec"
 alias :q="exit"
+alias lsg="ls | grep"
 
 # Custom dnf aliases
 alias dnfif="sudo dnf install --repo=fedora"
@@ -72,6 +73,7 @@ unsetopt beep
 # environment
 source ~/.env
 . $HOME/.cargo/env # rust
+export PATH=$PATH:$(go env GOPATH)/bin # binaries from 'go install'
 
 # Custom aliases
 source ~/utils.zsh
