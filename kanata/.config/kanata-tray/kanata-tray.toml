@@ -8,5 +8,6 @@ kanata_config = "/home/themarlstar/.config/kanata/config.kbd"
 autorun = true
 [presets.'main'.layer_icons]
 qwerty = "qwerty.png"
+qwerty-nm = "qwerty-nm.png"
 colemakdh = "colemak.png"
 "*" = "qwerty.png"
