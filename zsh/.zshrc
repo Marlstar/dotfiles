@@ -89,4 +89,7 @@ esac
 export TYPST_INSTALL="/home/themarlstar/.typst"
 export PATH="$TYPST_INSTALL/bin:$PATH"
 
+# Use neovim as a manpager
+export MANPAGER="nvim +Man!"
+
 export GPG_TTY=$(tty)
