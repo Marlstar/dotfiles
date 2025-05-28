@@ -67,23 +67,23 @@
 ;; Colemak
 (defalias cmt (tap-hold 150 150 t lsft))
 (defalias cms (tap-hold 150 150 s lctl))
-(defalias cmr (tap-hold 150 150 r lalt))
-(defalias cma (tap-hold 150 150 a lmeta))
+(defalias cmr (tap-hold 200 200 r lalt))
+(defalias cma (tap-hold 250 250 a lmeta))
 
 (defalias cmn (tap-hold 150 150 n rsft))
 (defalias cme (tap-hold 150 150 e rctl))
-(defalias cmi (tap-hold 150 150 i ralt))
-(defalias cmo (tap-hold 150 150 o rmeta))
+(defalias cmi (tap-hold 200 200 i ralt))
+(defalias cmo (tap-hold 250 250 o rmeta))
 ;; QWERTY
 (defalias qmf (tap-hold 150 150 f lsft))
 (defalias qmd (tap-hold 150 150 d lctl))
-(defalias qms (tap-hold 150 150 s lalt))
-(defalias qma (tap-hold 150 150 a lmeta))
+(defalias qms (tap-hold 200 200 s lalt))
+(defalias qma (tap-hold 250 250 a lmeta))
 
 (defalias qmj (tap-hold 150 150 j rsft))
 (defalias qmk (tap-hold 150 150 k rctl))
-(defalias qml (tap-hold 150 150 l ralt))
-(defalias qm; (tap-hold 150 150 ; rmeta))
+(defalias qml (tap-hold 200 200 l ralt))
+(defalias qm; (tap-hold 250 250 ; rmeta))
 
 ;; Put it here so it doesn't make the file's syntax highlights broken
 (defalias dquote (unicode r#"""#))
