@@ -65,25 +65,25 @@
 
 ;; Home-row mods
 ;; Colemak
-(defalias cmt (tap-hold 200 200 t lsft))
-(defalias cms (tap-hold 250 250 s lctl))
-(defalias cmr (tap-hold 250 250 r lalt))
-(defalias cma (tap-hold 300 300 a lmeta))
+(defalias cmt (tap-hold 150 150 t lsft))
+(defalias cms (tap-hold 150 150 s lctl))
+(defalias cmr (tap-hold 150 150 r lalt))
+(defalias cma (tap-hold 150 150 a lmeta))
 
-(defalias cmn (tap-hold 200 200 n rsft))
-(defalias cme (tap-hold 250 250 e rctl))
-(defalias cmi (tap-hold 250 250 i ralt))
-(defalias cmo (tap-hold 300 300 o rmeta))
+(defalias cmn (tap-hold 150 150 n rsft))
+(defalias cme (tap-hold 150 150 e rctl))
+(defalias cmi (tap-hold 150 150 i ralt))
+(defalias cmo (tap-hold 150 150 o rmeta))
 ;; QWERTY
-(defalias qmf (tap-hold 200 200 f lsft))
-(defalias qmd (tap-hold 250 250 d lctl))
-(defalias qms (tap-hold 250 250 s lalt))
-(defalias qma (tap-hold 300 300 a lmeta))
+(defalias qmf (tap-hold 150 150 f lsft))
+(defalias qmd (tap-hold 150 150 d lctl))
+(defalias qms (tap-hold 150 150 s lalt))
+(defalias qma (tap-hold 150 150 a lmeta))
 
-(defalias qmj (tap-hold 200 200 j rsft))
-(defalias qmk (tap-hold 250 250 k rctl))
-(defalias qml (tap-hold 250 250 l ralt))
-(defalias qm; (tap-hold 300 300 ; rmeta))
+(defalias qmj (tap-hold 150 150 j rsft))
+(defalias qmk (tap-hold 150 150 k rctl))
+(defalias qml (tap-hold 150 150 l ralt))
+(defalias qm; (tap-hold 150 150 ; rmeta))
 
 ;; Put it here so it doesn't make the file's syntax highlights broken
 (defalias dquote (unicode r#"""#))
