@@ -1,0 +1,89 @@
+* {
+	font: "JetBrains Mono NF 10";
+	border: 0;
+	border-radius: 6px;
+	padding: 6px;
+	background-color: #1e1e2e;
+	color: #cdd6f4;
+}
+
+window {
+	background-color: #1e1e2e;
+	border: 2px solid;
+	border-color: #cba6f7;
+	border-radius: 6px;
+}
+
+mainbox {
+	background-color: inherit;
+}
+
+inputbar {
+	background-color: #313244;
+	padding: 8px;
+	border-radius: 4px;
+}
+
+entry {
+	background-color: #1e2e2e;
+	color: #cdd6f4;
+	// expand: false;
+}
+
+listview {
+	background-color: #1e1e2e;
+	spacing: 4px;
+	border: 0;
+	border-radius: 6px;
+}
+
+element {
+	padding: 6px 10px;
+	border-radius: 4px;
+}
+
+element normal {
+	background-color: transparent;
+	text-color: #cdd6f4;
+}
+
+element selected {
+	/* background-color: #cba6f7; */
+	/* text-color: #1e1e2e; */
+	background-color: transparent;
+	border: 3px solid;
+	border-color: #cba6f7;
+	/* border-left: 8px solid; */
+	/* border-left-color: #cba6f7;  /* Mauve accent line */ */
+	/* padding-left: 6px; */
+	color: #cdd6f4;
+}
+
+element urgent {
+	background-color: #f38ba8;
+	text-color: #1e1e2e;
+}
+
+element active {
+	background-color: #a6e3a1;
+	text-color: #1e1e2e;
+}
+
+element-icon {
+	background-color: transparent;
+	size: 1.2em;
+	padding: 0;
+	margin: 0 6px 0 0;
+}
+
+scrollbar {
+	width: 0;
+}
+
+case-indicator {
+	background-color: transparent;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	width: 0;
+}
