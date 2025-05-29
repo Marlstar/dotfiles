@@ -93,6 +93,6 @@ export PATH="$TYPST_INSTALL/bin:$PATH"
 export MANPAGER="nvim +Man!"
 
 # Commit, tag, and push for dist releases
-cargo_release() { gc -m "build(release): v$1"; git tag "v$1"; }
+cargo_release() { gc -m "build(release): v$1" && git tag "v$1"; }
 
 export GPG_TTY=$(tty)
