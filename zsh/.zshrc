@@ -96,6 +96,10 @@ export MANPAGER="nvim +Man!"
 # Commit, tag, and push for dist releases
 cargo_release() { gc -m "build(release): v$1" && git tag "v$1"; }
 
+function tas() {
+	tmux attach -t $(tmux ls | awk '{print $1}' | sed 's/://' | fzf)
+}
+
 # Make chafa work with tmux without having to manually specify flags
 alias chafa="chafa -f kitty --passthrough tmux"
 
