@@ -19,6 +19,7 @@ plugins=(
 	github # more github stuff
 	starship
 	zoxide
+	tmux
 	rbw
 	eza
 	rust # for cargo/rustc/rustup
