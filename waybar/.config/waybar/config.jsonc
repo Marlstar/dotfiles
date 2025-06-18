@@ -16,6 +16,7 @@
 		// "cpu",
 		// "temperature",
 		// "custom/layout",
+		"memory",
 		"battery",
 		"clock",
 		"custom/notifications"
