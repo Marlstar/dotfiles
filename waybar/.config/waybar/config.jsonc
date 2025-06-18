@@ -59,7 +59,8 @@
 		"tooltip": false
 	},
 	"memory": {
-		"format": "{}%  "
+		"format": "{}%  ",
+		"interval": 5
 	},
 	"temperature": {
 		"critical-threshold": 80,
