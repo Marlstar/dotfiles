@@ -59,8 +59,9 @@
 		"tooltip": false
 	},
 	"memory": {
-		"format": "{}%  ",
-		"interval": 5
+		// "format": "{}%  ",
+		"format": "{used:0.1f}G  {swapUsed:0.1f}G",
+		"interval": 1
 	},
 	"temperature": {
 		"critical-threshold": 80,
@@ -70,8 +71,8 @@
 	},
 	"battery": {
 		"states": {
-			"warning": 60,
-			"critical": 30
+			"warning": 40,
+			"critical": 20
 		},
 		"format": "{icon} {capacity}%",
 		"format-full": "{icon}  {capacity}%",
