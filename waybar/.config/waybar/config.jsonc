@@ -35,9 +35,9 @@
 		"format": "{icon}",
 		"on-click": "activate",
 		"format-icons": {
-			"active": " ", // using a thin space (U+2009)
-			"9": " ", // Workspace for music
-			"10": " " // Workspace for messaging apps (signal and telegram)
+			"active": "",
+			"9": "", // Workspace for music
+			"10": "" // Workspace for messaging apps (signal and telegram)
 		},
 		"sort-by-number": true,
 		"persistent-workspaces": {
@@ -75,7 +75,7 @@
 			"critical": 20
 		},
 		"format": "{icon} {capacity}%",
-		"format-full": "{icon}  {capacity}%",
+		"format-full": "{icon} {capacity}%",
 		"format-charging": " {capacity}%",
 		"format-plugged": " {capacity}%",
 		"format-alt": "{icon} {time}",
@@ -84,7 +84,7 @@
 	},
 	"network": {
 		// {signalStrength}
-		"format-wifi": "  {essid}",
+		"format-wifi": " {essid}",
 		"format-ethernet": "{cidr} ",
 		"tooltip-format": "{ifname} via {gwaddr} ",
 		"format-linked": "{ifname} (No IP) ",
@@ -96,7 +96,7 @@
 		"spacing": 10
 	},
 	"pulseaudio": {
-		"format": "{icon}  {volume}%",
+		"format": "{icon} {volume}%",
 		"format-bluetooth": "{volume}% {icon}",
 		"format-bluetooth-muted": " {icon}",
 		"format-muted": "",
