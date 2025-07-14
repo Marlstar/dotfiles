@@ -7,3 +7,4 @@ source ~/.config/fish/themes/tokyonight_moon.fish
 starship init fish | source # Shell prompt
 zoxide init fish | source # Zoxide
 alias ls="eza --icons -a --group-directories-first" # Eza
+source ~/.config/fish/functions/dnf_custom.fish
