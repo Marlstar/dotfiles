@@ -104,3 +104,8 @@ function tas() {
 alias chafa="chafa -f kitty --passthrough tmux"
 
 export GPG_TTY=$(tty)
+
+# Use fish
+if [[ -o interactive ]] && [[ "$SHLVL" -eq 1 ]]; then
+  exec fish
+fi
