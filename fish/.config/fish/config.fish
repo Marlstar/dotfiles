@@ -5,3 +5,4 @@ end
 source ~/.config/fish/themes/tokyonight_moon.fish
 
 starship init fish | source # Shell prompt
+zoxide init fish | source # Zoxide
