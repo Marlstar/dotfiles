@@ -1,3 +1,5 @@
+set --erase fish_greeting # Don't show the greeting message
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
