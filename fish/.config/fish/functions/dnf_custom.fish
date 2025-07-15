@@ -2,31 +2,31 @@
 abbr --add --position anywhere copr: copr:copr.fedorainfracloud.org:
 
 
-function dnfi -d "dnf install"
-	sudo dnf install $argv[1]
+function dnfi -d "dnf install" -w "dnf install"
+	sudo dnf install $argv
 end
-function dnfif -d "dnf install (fedora repo only)"
-	sudo dnf install $argv[1] --repo=fedora
-end
-
-function dnfs -d "dnf search"
-	dnf search $argv[1]
-end
-function dnfs -d "dnf search (fedora repo only)"
-	dnf search $argv[1] --repo=fedora
+function dnfif -d "dnf install (fedora repo only)" -w "dnf install"
+	sudo dnf install $argv --repo=fedora
 end
 
-function dnfr -d "dnf remove"
-	sudo dnf remove $argv[1]
+function dnfs -d "dnf search" -w "dnf search"
+	dnf search $argv
+end
+function dnfs -d "dnf search (fedora repo only)" -w "dnf search"
+	dnf search --repo=fedora $argv
 end
 
-function dnfu -d "dnf upgrade"
-	sudo dnf upgrade $argv[1]
+function dnfr -d "dnf remove" -w "dnf remove"
+	sudo dnf remove $argv
 end
 
-function dnfl -d "dnf list"
-	dnf list
+function dnfu -d "dnf upgrade" -w "dnf upgrade"
+	sudo dnf upgrade $argv
 end
-function dnfli -d "dnf list (installed)"
+
+function dnfl -d "dnf list" -w "dnf list"
+	dnf list $argv
+end
+function dnfli -d "dnf list (installed)" -w "dnf list"
 	dnf list installed
 end
