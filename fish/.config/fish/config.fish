@@ -12,6 +12,6 @@ alias ls="eza --icons -a --group-directories-first" # Eza
 source ~/.config/fish/functions/dnf_custom.fish
 
 sourcedir ~/.config/fish/abbr
-sourcedir ~/.config/fish/path
+sourcedir ~/.config/fish/env
 
 bind ctrl-z fg # Control Z brings back to foreground
