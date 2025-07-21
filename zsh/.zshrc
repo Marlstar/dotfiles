@@ -109,3 +109,6 @@ export GPG_TTY=$(tty)
 if [[ -o interactive ]] && [[ "$SHLVL" -eq 1 ]]; then
   exec fish
 fi
+if [[ -o interactive ]] && [[ "$SHLVL" -eq 2 ]] && [[ "$INSIDE_NEOVIM_FISH" -eq 1 ]]; then
+	exec fish
+fi
