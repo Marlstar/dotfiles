@@ -5,7 +5,7 @@ abbr -a dnfi sudo dnf install
 abbr -a dnfif sudo dnf install --repo=fedora
 
 abbr -a dnfs dnf search
-abbr -a dnfs dnf search --repo=fedora
+abbr -a dnfsf dnf search --repo=fedora
 
 abbr -a dnfr sudo dnf remove
 
