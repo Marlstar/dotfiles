@@ -81,6 +81,7 @@
 		"format-charging": " {capacity}%",
 		"format-plugged": " {capacity}%",
 		"format-alt": "{icon} {time}",
+		"format-time": "{H}h{M}min",
 		"format-icons": ["", "", "", "", ""],
 		"interval": 1
 	},
