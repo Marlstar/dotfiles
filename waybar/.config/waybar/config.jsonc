@@ -4,26 +4,24 @@
 	"margin-right": 10,
 	"height" : 30,
 	"modules-left": [
-		"hyprland/window"
+		"network",
+		"memory",
+		"battery"
 	],
 	"modules-center": [
-		"hyprland/workspaces"
+		"hyprland/window",
+		"custom/space",
+		"hyprland/workspaces",
+		"pulseaudio"
 	],
 	"modules-right": [
 		"tray",
-		"pulseaudio",
-		"network",
-		// "cpu",
-		// "temperature",
-		// "custom/layout",
-		"memory",
-		"battery",
 		"clock",
 		"custom/notifications"
 	],
 	"hyprland/window": {
 		"format": "{}",
-		"max-length": 60,
+		"max-length": 80,
 		"rewrite": {
 			"": "Desktop"
 		},
@@ -32,18 +30,22 @@
 		"icon-size": 16
 	},
 	"hyprland/workspaces": {
-		"format": "{icon}",
-		"on-click": "activate",
-		"format-icons": {
-			"active": "",
-			"9": "", // Workspace for music
-			"10": "" // Workspace for messaging apps (signal and telegram)
-		},
-		"sort-by-number": true,
-		"persistent-workspaces": {
-			"*": 3 // 3 workspaces by default on every monitor
-		}
+		"active-only": true,
+		"format": "[{icon}]"
 	},
+	// "hyprland/workspaces": {
+	// 	"format": "{icon}",
+	// 	"on-click": "activate",
+	// 	"format-icons": {
+	// 		"active": "",
+	// 		"9": "", // Workspace for music
+	// 		"10": "" // Workspace for messaging apps (signal and telegram)
+	// 	},
+	// 	"sort-by-number": true,
+	// 	"persistent-workspaces": {
+	// 		"*": 3 // 3 workspaces by default on every monitor
+	// 	}
+	// },
 	"custom/layout": {
 		"format": " {}",
 		"exec": "hyprctl devices -j | jq -r '.keyboards[] | select(.main == true) | .active_keymap' | cut -d '(' -f2 | cut -d ')' -f1 | sed 's/-/ /' | sed 's/US/QWERTY/' | sed 's/ Ortholinear//'",
@@ -116,6 +118,7 @@
 		"reverse-scrolling": true,
 		"smooth-scrolling-threshold": 0.7
 	},
+	"custom/space": { "format": " " },
 	"custom/notifications": {
 		"tooltip": false,
 		"format": "{icon} ",
