@@ -103,7 +103,9 @@ button:hover {
 .modules-right,
 .modules-left,
 .modules-center {
-	background-color: @base;
+	/* background-color: @base; */
+	/* background-color: alpha(@base, 0.5); */
+	background-color: rgba(0,0,0,0);
 	border-radius: 15px;
 }
 
