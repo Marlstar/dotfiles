@@ -15,6 +15,8 @@
 		"pulseaudio"
 	],
 	"modules-right": [
+		"mpris",
+		"custom/space",
 		"tray",
 		"clock",
 		"custom/notifications"
@@ -118,6 +120,22 @@
 		"on-scroll-down": "pamixer -u && pamixer --decrease 1",
 		"reverse-scrolling": true,
 		"smooth-scrolling-threshold": 0.7
+	},
+	"mpris": {
+		"format": "{player_icon} {dynamic} {status_icon}",
+		"dynamic-order": [
+			"title",
+			"artist"
+		],
+		"status-icons": {
+			"playing": "",
+			"paused": "",
+			"stopped": ""
+		},
+		"player-icons": {
+			"default": "",
+			"firefox": "󰈹"
+		}
 	},
 	"custom/space": { "format": " " },
 	"custom/notifications": {
