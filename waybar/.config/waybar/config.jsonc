@@ -123,6 +123,7 @@
 	},
 	"mpris": {
 		"format": "{player_icon} {dynamic} {status_icon}",
+		"tooltip-format": "{title} by {artist} | {length} | Playing in {player}",
 		"dynamic-order": [
 			"title",
 			"artist"
