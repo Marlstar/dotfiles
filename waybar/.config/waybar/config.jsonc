@@ -15,6 +15,8 @@
 		"pulseaudio"
 	],
 	"modules-right": [
+		"image#mpris_art",
+		"custom/space",
 		"mpris",
 		"custom/space",
 		"tray",
@@ -122,7 +124,7 @@
 		"smooth-scrolling-threshold": 0.7
 	},
 	"mpris": {
-		"format": "{player_icon} {dynamic} {status_icon}",
+		"format": "{dynamic} {status_icon}",
 		"tooltip-format": "{title} by {artist} | {length} | Playing in {player}",
 		"dynamic-order": [
 			"title",
@@ -162,5 +164,10 @@
 	"custom/split": {
 		"tooltip": false,
 		"format": "     "
+	},
+	"image#mpris_art": {
+		"exec": "~/.config/waybar/scripts/mpris_art.sh",
+		"size": 20,
+		"interval": 1
 	}
 }
