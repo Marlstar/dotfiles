@@ -168,6 +168,7 @@
 	"image#mpris_art": {
 		"exec": "~/.config/waybar/scripts/mpris_art.sh",
 		"size": 20,
+		"on-click": "playerctl play-pause",
 		"interval": 1
 	}
 }
