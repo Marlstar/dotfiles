@@ -1,3 +1,13 @@
+# Use fish
+if [[ -o interactive ]] && [[ "$SHLVL" -eq 1 ]]; then
+  exec fish
+fi
+if [[ -o interactive ]] && [[ "$SHLVL" -eq 2 ]] && [[ "$INSIDE_NEOVIM_FISH" -eq 1 ]]; then
+	exec fish
+fi
+
+# Non-fish:
+
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME=""
 
@@ -104,11 +114,3 @@ function tas() {
 alias chafa="chafa -f kitty --passthrough tmux"
 
 export GPG_TTY=$(tty)
-
-# Use fish
-if [[ -o interactive ]] && [[ "$SHLVL" -eq 1 ]]; then
-  exec fish
-fi
-if [[ -o interactive ]] && [[ "$SHLVL" -eq 2 ]] && [[ "$INSIDE_NEOVIM_FISH" -eq 1 ]]; then
-	exec fish
-fi
