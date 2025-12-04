@@ -41,5 +41,12 @@ PanelWindow {
 				leftMargin: 8
 			}
 		}
+
+		Clock {
+			anchors {
+				right: parent.right
+				rightMargin: 16
+			}
+		}
 	}
 }
