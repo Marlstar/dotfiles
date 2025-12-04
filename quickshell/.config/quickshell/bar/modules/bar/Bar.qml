@@ -1,6 +1,5 @@
 import QtQuick;
 import Quickshell;
-import Quickshell.Hyprland;
 import "../widgets/";
 import "../../colours.js" as Colours;
 
@@ -34,18 +33,52 @@ PanelWindow {
 			width: 2
 		}
 
-		Workspaces {
-			showNumbers: false
+		// LEFT SIDE MODULES
+		Row {
 			anchors {
 				left: parent.left
-				leftMargin: 8
+				verticalCenter: parent.verticalCenter
+				leftMargin: 16
+			}
+			spacing: 8
+
+			// Widgets
+
+			Workspaces {
+				showNumbers: false
 			}
 		}
 
-		Clock {
+		// CENTER MODULES
+		Row {
+			// alignment: Qt.AlignHCenter
+
+			anchors {
+				centerIn: parent
+			}
+			spacing: 8
+
+			// Widgets
+
+			Clock {
+				showTime: true
+				showDate: false
+			}
+		}
+
+		// RIGHT SIDE MODULES
+		Row {
 			anchors {
 				right: parent.right
+				verticalCenter: parent.verticalCenter
 				rightMargin: 16
+			}
+			spacing: 8
+
+			// Widgets
+
+			Workspaces {
+				showNumbers: false
 			}
 		}
 	}
