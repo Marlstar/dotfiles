@@ -14,17 +14,20 @@ Row {
 	spacing: 8
 
 	Repeater {
-		model: Hyprland.workspaces
+		model: 9
 
 		Rectangle {
-			width: 24
+			property var ws: Hyprland.workspaces.values.find(w => w.id === index + 1)
+			property var active: Hyprland.focusedWorkspace?.id === index + 1
+
+			width: active ? 24 : 20
 			height: 16
 			radius: 15
-			color: modelData.active ? Colours.subtext0 : Colours.overlay0
+			color: active ? Colours.subtext1 : ( ws ? Colours.overlay1 : Colours.surface1 )
 
 			MouseArea {
 				anchors.fill: parent
-				onClicked: Hyprland.dispatch("workspace " + modelData.id)
+				onClicked: Hyprland.dispatch("workspace " + ws.id)
 			}
 
 			Text {
