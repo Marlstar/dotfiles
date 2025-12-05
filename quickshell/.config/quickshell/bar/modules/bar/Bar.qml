@@ -14,6 +14,7 @@ PanelWindow {
 	}
 
 	implicitHeight: 40
+	color: "transparent"
 
 	margins {
 		top: 8
@@ -76,9 +77,8 @@ PanelWindow {
 			spacing: 8
 
 			// Widgets
-
-			Workspaces {
-				showNumbers: false
+			Memory {
+				color: Colours.blue
 			}
 		}
 	}
