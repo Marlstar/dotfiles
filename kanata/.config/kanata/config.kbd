@@ -18,7 +18,7 @@
 (deflayer qwerty-nm
 	grv  1 2 3 4 5 6 7 8 9 0 - @useqwerty bspc
 	tab  q w e r t y u i o p [ ] \
-	esc a s d f g h j k l ; ' ret
+	esc @socd-a s @socd-d f g h j k l ; ' ret
 	lsft z x c v b n m , . / rsft
 	lctl lmet lalt spc ralt rctl
 )
@@ -54,6 +54,20 @@
 	allow-hardware-repeat   no
 )
 
+(defvirtualkeys
+	  ;; Arrow keys
+	  va a
+	  vd d
+	  
+	  ;; State tracking for both layers
+	  va-held nop1
+	  vd-held nop3
+
+	  ;; Arrow release handlers
+	  va-rel (multi (on-press release-vkey va-held) (on-press release-vkey va) (switch ((input virtual vd-held)) (on-press press-vkey vd) break () XX break))
+	  vd-rel (multi (on-press release-vkey vd-held) (on-press release-vkey vd) (switch ((input virtual va-held)) (on-press press-vkey va) break () XX break))
+  )
+
 ;; Toggle between QWERTY and Colemak-DH
 (defalias usecolemak (layer-switch colemakdh))
 (defalias useqwerty (layer-switch qwerty))
@@ -85,5 +99,8 @@
 (defalias qml (tap-hold 250 250 l ralt))
 (defalias qm; (tap-hold 250 250 ; rmeta))
 
+(defalias socd-a (multi (on-press press-vkey va-held) (on-press release-vkey vd) (on-press press-vkey va) (on-release tap-vkey va-rel)))
+(defalias socd-a (multi (on-press press-vkey vd-held) (on-press release-vkey va) (on-press press-vkey vd) (on-release tap-vkey vd-rel)))
+	
 ;; Put it here so it doesn't make the file's syntax highlights broken
 (defalias dquote (unicode r#"""#))
